@@ -1,0 +1,18 @@
+
+spring:
+  application:
+    name: eureka-consumer-fegion-hystrix
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7000/eureka/
+server:
+  port: 9004
+feign:
+  hystrix:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
