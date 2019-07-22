@@ -7,5 +7,20 @@ spring:
         git:
           uri: https://github.com/mkdlp/LearnSpringCloud.git
           search-paths: config-repo
+    bus:
+      enabled: true
+      trace:
+        enabled: true
 server:
   port: 12000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+
+

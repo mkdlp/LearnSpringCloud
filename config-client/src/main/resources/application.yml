@@ -1,5 +1,10 @@
 spring:
   application:
-    name: config-git
+    name: config-client
+    cloud:
+      bus:
+        trace:
+          enable: true
+        enable: true
 server:
   port: 13000
